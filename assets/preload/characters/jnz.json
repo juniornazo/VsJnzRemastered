@@ -1,0 +1,131 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-115,
+				-15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-110,
+				-60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-158,
+				-27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-59,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				21,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28
+			],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-28,
+				-5
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "count",
+			"loop": false,
+			"name": "count"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/JuniorNazo_Assets",
+	"position": [
+		0,
+		150
+	],
+	"healthicon": "jnz",
+	"flip_x": false,
+	"healthbar_colors": [
+		69,
+		135,
+		255
+	],
+	"camera_position": [
+		0,
+		40
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

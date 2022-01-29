@@ -1,0 +1,6 @@
+{
+	"name": "Minus Mode Mean BF",
+	"description": "Replace all character to the minus version(Bf Mean edition)",
+	"restart":true,
+	"color": [223, 15, 0]
+}

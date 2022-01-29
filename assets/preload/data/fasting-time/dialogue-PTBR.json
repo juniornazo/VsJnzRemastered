@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "jnz",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ue...\\npor que parou???"
+		},
+		{
+			"speed": 0.065,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "olha... sem ofender nem nada, mais..."
+		},
+		{
+			"speed": 0.065,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "seu ritmo foi bem fraco..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "sim, nem quero mais fazer beep bop depois dessa!"
+		},
+		{
+			"speed": 0.1,
+			"portrait": "jnz",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "..."
+		},
+		{
+			"speed": 0.075,
+			"portrait": "jnz",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "entao...\\nmeu ritmo e fraco e..."
+		},
+		{
+			"speed": 0.075,
+			"portrait": "jnz",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "ok..."
+		},
+		{
+			"speed": 0.04,
+			"portrait": "jnz",
+			"boxState": "angry",
+			"expression": "angry",
+			"text": "eu vou aumentar meu ritmo!!!"
+		}
+	]
+}

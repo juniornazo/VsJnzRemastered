@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "jnz",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "huh...\\nwhy did you stop???"
+		},
+		{
+			"speed": 0.065,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "look... no offense or anything, but..."
+		},
+		{
+			"speed": 0.065,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "your rhythm was very weak..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "yeah, I don't even want speak in beep bop after that!"
+		},
+		{
+			"speed": 0.1,
+			"portrait": "jnz",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "..."
+		},
+		{
+			"speed": 0.075,
+			"portrait": "jnz",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "so...\\nmy rhythm is weak, huh...?"
+		},
+		{
+			"speed": 0.075,
+			"portrait": "jnz",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "ok..."
+		},
+		{
+			"speed": 0.04,
+			"portrait": "jnz",
+			"boxState": "angry",
+			"expression": "angry",
+			"text": "I will increase my rhythm then!!!"
+		}
+	]
+}

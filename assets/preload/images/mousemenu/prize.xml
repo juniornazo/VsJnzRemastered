@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="prize.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="prize0000" x="0" y="0" width="75" height="121" frameX="2" frameY="3" frameWidth="75" frameHeight="121"/>
+	<SubTexture name="shine0000" x="75" y="0" width="70" height="115"/>
+	<SubTexture name="shine0001" x="75" y="0" width="70" height="115"/>
+	<SubTexture name="shine0002" x="75" y="0" width="70" height="115"/>
+	<SubTexture name="shine0003" x="145" y="0" width="70" height="115"/>
+	<SubTexture name="shine0004" x="215" y="0" width="70" height="115"/>
+	<SubTexture name="shine0005" x="285" y="0" width="70" height="115"/>
+	<SubTexture name="shine0006" x="355" y="0" width="70" height="115"/>
+	<SubTexture name="shine0007" x="425" y="0" width="70" height="115"/>
+	<SubTexture name="shine0008" x="0" y="121" width="70" height="115"/>
+	<SubTexture name="shine0009" x="70" y="121" width="70" height="115"/>
+	<SubTexture name="shine0010" x="75" y="0" width="70" height="115"/>
+	<SubTexture name="shine0011" x="75" y="0" width="70" height="115"/>
+	<SubTexture name="shine0012" x="75" y="0" width="70" height="115"/>
+	<SubTexture name="shine0013" x="75" y="0" width="70" height="115"/>
+	<SubTexture name="shine0014" x="75" y="0" width="70" height="115"/>
+	<SubTexture name="shine0015" x="75" y="0" width="70" height="115"/>
+</TextureAtlas>

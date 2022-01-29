@@ -1,0 +1,48 @@
+{
+	"songs": [
+		[
+			"shine stars",
+			"jnz",
+			[
+				86,
+				173,
+				253
+			]
+		],
+		[
+			"fasting time",
+			"jnz",
+			[
+				86,
+				173,
+				253
+			]
+		],
+		[
+			"mad buns",
+			"mad-bunny",
+			[
+				160,
+				40,
+				33
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "street",
+	"weekCharacters": [
+		"jnz",
+		"bf",
+		"gf"
+	],
+	"storyName": "Junior Nazo",
+	"weekName": "Week Jnz",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

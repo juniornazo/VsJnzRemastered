@@ -1,0 +1,6 @@
+{
+	"name": "Minus Mode Beta BF",
+	"description": "Replace all character to the minus version(Bf Beta edition)",
+	"restart":true,
+	"color": [227, 213, 28]
+}

@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Hey!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "talk",
+			"text": "you are the boyfriend of the ex rockstar's daughter, right?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "talk",
+			"text": "beep!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "ah! cool!\\nI always wanted to meet you!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "talk",
+			"text": "beep bop?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "a rap battle?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "talk",
+			"text": "yes of course, i was thinking about that too.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "talk",
+			"text": "Let's Start it!!!",
+			"boxState": "angry",
+			"speed": 0.03,
+			"portrait": "jnz"
+		}
+	]
+}

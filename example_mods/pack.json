@@ -1,0 +1,6 @@
+{
+	"name": "Jnz Week Port",
+	"description": "A port for Vs Jnz in pshch engine",
+	"restart":false,
+	"color": [170, 0, 255]
+}

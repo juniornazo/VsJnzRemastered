@@ -1,0 +1,49 @@
+{
+	"song": {
+		"speed": 1.7,
+		"stage": null,
+		"player1": "bf",
+		"player2": "jnz",
+		"player3": null,
+		"events": [
+			[
+				75,
+				[
+					[
+						"Play Animation",
+						"count",
+						"dad"
+					]
+				]
+			],
+			[
+				62662.5,
+				[
+					[
+						"Play Animation",
+						"singDOWNmiss",
+						"bf"
+					]
+				]
+			],
+			[
+				62756.25,
+				[
+					[
+						"Play Animation",
+						"sad",
+						"gf"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-street",
+		"bpm": 100,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Shine Stars"
+	}
+}

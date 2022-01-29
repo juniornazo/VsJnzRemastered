@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gump.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bump0000" x="0" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0001" x="0" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0002" x="161" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0003" x="161" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0004" x="322" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0005" x="322" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0006" x="322" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0007" x="0" y="103" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0008" x="0" y="103" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0009" x="0" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="bump0010" x="0" y="0" width="161" height="103" frameX="0" frameY="0" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0000" x="161" y="103" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0001" x="161" y="103" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0002" x="161" y="103" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0003" x="332" y="103" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0004" x="332" y="103" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0005" x="332" y="103" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0006" x="0" y="210" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0007" x="0" y="210" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+	<SubTexture name="gamer0008" x="0" y="210" width="171" height="107" frameX="8" frameY="2" frameWidth="171" frameHeight="107"/>
+</TextureAtlas>

@@ -1,0 +1,10 @@
+{
+	"idle_anim": "jnz char",
+	"image": "Menu_jnz",
+	"position": [
+		75,
+		0
+	],
+	"scale": 1,
+	"confirm_anim": "M Dad Idle"
+}

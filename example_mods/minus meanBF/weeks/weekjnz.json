@@ -1,0 +1,48 @@
+{
+	"storyName": "Junior Nazo",
+	"hideFreeplay": false,
+	"weekBackground": "street",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"weekCharacters": [
+		"jnz",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"shine stars",
+			"jnz",
+			[
+				86,
+				173,
+				253
+			]
+		],
+		[
+			"fasting time",
+			"jnz",
+			[
+				86,
+				173,
+				253
+			]
+		],
+		[
+			"mad buns",
+			"mad-bunny",
+			[
+				160,
+				40,
+				33
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Week Jnz"
+}
