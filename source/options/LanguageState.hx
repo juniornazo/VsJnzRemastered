@@ -48,13 +48,13 @@ class LanguageState extends MusicBeatState
         grpLangua = new FlxTypedGroup<Alphabet>();
 		add(grpLangua);
 
-        var pisspoop:Array<Array<String>> = [
+        var gringoStuff:Array<Array<String>> = [
             ['English'],
             ['Portuguese'],
             ['Spanish']
         ];
 
-        for(i in pisspoop){
+        for(i in gringoStuff){
 			langStuff.push(i);
 		}
 
