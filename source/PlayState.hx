@@ -1207,6 +1207,7 @@ class PlayState extends MusicBeatState
 					startVideo('ShineStars');
 
 				case 'fasting-time':
+					dad.playAnim('stoped', false);
 					startDialogue(dialogueJson);
 
 				default:

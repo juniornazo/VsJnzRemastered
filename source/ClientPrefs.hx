@@ -13,7 +13,7 @@ class ClientPrefs {
 	public static var flashing:Bool = true;
 	public static var shaking:Bool = true;
 	//public static var portDialogue:Bool = false;
-	public static var languaGame:String = null;
+	public static var languaGame:String = 'English';
 	public static var globalAntialiasing:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;
