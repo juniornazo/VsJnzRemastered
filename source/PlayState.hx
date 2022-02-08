@@ -427,13 +427,23 @@ class PlayState extends MusicBeatState
 
 			case 'street': //Week Jnz snine-star, fasting-time
 
-			var bg:BGSprite = new BGSprite('streetcity_bg', -270, -300, 0.9, 0.9);
+			var bg:BGSprite = new BGSprite('streetcity_bg', -270, -300, 0.9, 0.88);
             bg.setGraphicSize(Std.int(bg.width * 0.5));
             bg.updateHitbox();
             add(bg);
 
+			var streetCity:BGSprite = new BGSprite('city_street', -270, -275, 0.925, 0.88);
+            streetCity.setGraphicSize(Std.int(streetCity.width * 0.5));
+            streetCity.updateHitbox();
+            add(streetCity);
+
+			var streetGround:BGSprite = new BGSprite('bg_street', -270, -150, 0.94, 0.94);
+            streetGround.setGraphicSize(Std.int(streetGround.width * 0.5));
+            streetGround.updateHitbox();
+            add(streetGround);
+
 			if(!ClientPrefs.lowQuality) {
-            friends = new BackgroundFriends(165, 260);
+            friends = new BackgroundFriends(165, 235);
             friends.updateHitbox();
             friends.setGraphicSize(Std.int(friends.width * 1.25));
             friends.scrollFactor.set(0.94, 0.94);
@@ -452,8 +462,18 @@ class PlayState extends MusicBeatState
             bg.updateHitbox();
             add(bg);
 
+			var streetCity:BGSprite = new BGSprite('city_madstreet', -270, -275, 0.925, 0.88);
+            streetCity.setGraphicSize(Std.int(streetCity.width * 0.5));
+            streetCity.updateHitbox();
+            add(streetCity);
+
+			var streetGround:BGSprite = new BGSprite('bg_street', -270, -150, 0.94, 0.94);
+            streetGround.setGraphicSize(Std.int(streetGround.width * 0.5));
+            streetGround.updateHitbox();
+            add(streetGround);
+
 			if(!ClientPrefs.lowQuality) {
-            friends = new BackgroundFriends(1065, 260);
+            friends = new BackgroundFriends(1065, 290);
             friends.updateHitbox();
             friends.setGraphicSize(Std.int(friends.width * 1.25));
 			friends.getScared();
