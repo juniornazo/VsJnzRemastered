@@ -9,12 +9,12 @@
 	"animations": [
 		{
 			"idle_offsets": [
-				0,
-				0
+				-25,
+				25
 			],
 			"loop_offsets": [
-				0,
-				0
+				-25,
+				25
 			],
 			"anim": "talk",
 			"idle_name": "portrait normal0011",
@@ -22,16 +22,42 @@
 		},
 		{
 			"loop_offsets": [
-				0,
-				0
+				-25,
+				25
 			],
 			"anim": "angry",
 			"idle_offsets": [
-				0,
-				0
+				-25,
+				25
 			],
 			"loop_name": "portrait angry",
 			"idle_name": "portrait angry0011"
+		},
+		{
+			"loop_offsets": [
+				-25,
+				25
+			],
+			"anim": "huh",
+			"idle_offsets": [
+				-25,
+				25
+			],
+			"loop_name": "portrait huh",
+			"idle_name": "portrait huh0011"
+		},
+		{
+			"loop_offsets": [
+				-40,
+				26
+			],
+			"anim": "pissed",
+			"idle_offsets": [
+				-40,
+				20
+			],
+			"loop_name": "portrait pissed",
+			"idle_name": "portrait red eye"
 		}
 	]
 }

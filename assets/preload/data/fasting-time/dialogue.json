@@ -1,60 +1,60 @@
 {
 	"dialogue": [
 		{
+			"expression": "huh",
+			"text": "huh...\\nwhy did you stop???",
+			"boxState": "normal",
 			"speed": 0.05,
-			"portrait": "jnz",
-			"boxState": "normal",
-			"expression": "talk",
-			"text": "huh...\\nwhy did you stop???"
+			"portrait": "jnz"
 		},
 		{
-			"speed": 0.065,
-			"portrait": "gf",
-			"boxState": "normal",
 			"expression": "talk",
-			"text": "look... no offense or anything, but..."
+			"text": "look... no offense or anything, but...",
+			"boxState": "normal",
+			"speed": 0.065,
+			"portrait": "gf"
 		},
 		{
-			"speed": 0.065,
-			"portrait": "gf",
-			"boxState": "normal",
 			"expression": "confused",
-			"text": "your rhythm was very weak..."
+			"text": "your rhythm was very weak...",
+			"boxState": "normal",
+			"speed": 0.065,
+			"portrait": "gf"
 		},
 		{
+			"expression": "angry",
+			"text": "yeah, I don't even want speak in beep bop after that!",
+			"boxState": "normal",
 			"speed": 0.05,
-			"portrait": "bf",
-			"boxState": "normal",
-			"expression": "angry",
-			"text": "yeah, I don't even want speak in beep bop after that!"
+			"portrait": "bf"
 		},
 		{
+			"expression": "angry",
+			"text": "...",
+			"boxState": "normal",
 			"speed": 0.1,
-			"portrait": "jnz",
-			"boxState": "normal",
-			"expression": "angry",
-			"text": "..."
+			"portrait": "jnz"
 		},
 		{
+			"expression": "angry",
+			"text": "so...\\nmy rhythm is weak, huh...?",
+			"boxState": "normal",
 			"speed": 0.075,
-			"portrait": "jnz",
-			"boxState": "normal",
-			"expression": "angry",
-			"text": "so...\\nmy rhythm is weak, huh...?"
+			"portrait": "jnz"
 		},
 		{
+			"expression": "angry",
+			"text": "ok...",
+			"boxState": "normal",
 			"speed": 0.075,
-			"portrait": "jnz",
-			"boxState": "normal",
-			"expression": "angry",
-			"text": "ok..."
+			"portrait": "jnz"
 		},
 		{
-			"speed": 0.04,
-			"portrait": "jnz",
+			"expression": "pissed",
+			"text": "I will increase my rhythm then!!!",
 			"boxState": "angry",
-			"expression": "angry",
-			"text": "I will increase my rhythm then!!!"
+			"speed": 0.04,
+			"portrait": "jnz"
 		}
 	]
 }
