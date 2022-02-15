@@ -185,11 +185,17 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
-		if(FlxG.save.data.flashing == null && !FlashingState.leftState) {
+		if(FlxG.save.data.flashing == null && !FlashingState.leftState && FlxG.save.data.languaGame != null) {
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new FlashingState());
-		} else {
+		} 
+		else if(FlxG.save.data.languaGame == null && !PrelangState.leftState) {
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
+			MusicBeatState.switchState(new PrelangState());
+		}
+		else {
 			#if desktop
 			DiscordClient.initialize();
 			Application.current.onExit.add (function (exitCode) {
@@ -332,38 +338,39 @@ class TitleState extends MusicBeatState
 			path = "assets/images/titleEnter.png";
 		}
 	
-		var path = "mods/" + Paths.currentModDirectory + "/images/titleEnterPort.png";
+		var pathPTBR = "mods/" + Paths.currentModDirectory + "/images/titleEnterPort.png";
 		//trace(path, FileSystem.exists(path));
-		if (!FileSystem.exists(path)){
-			path = "mods/images/titleEnterPort.png";
+		if (!FileSystem.exists(pathPTBR)){
+			pathPTBR = "mods/images/titleEnterPort.png";
 		}
 		//trace(path, FileSystem.exists(path));
-		if (!FileSystem.exists(path)){
-			path = "assets/images/titleEnterPort.png";
-		}
-
-		var path = "mods/" + Paths.currentModDirectory + "/images/titleEnterEsp.png";
-		//trace(path, FileSystem.exists(path));
-		if (!FileSystem.exists(path)){
-			path = "mods/images/titleEnterEsp.png";
-		}
-		//trace(path, FileSystem.exists(path));
-		if (!FileSystem.exists(path)){
-				path = "assets/images/titleEnterEsp.png";
+		if (!FileSystem.exists(pathPTBR)){
+			pathPTBR = "assets/images/titleEnterPort.png";
 		}
 
+		var pathESP = "mods/" + Paths.currentModDirectory + "/images/titleEnterEsp.png";
 		//trace(path, FileSystem.exists(path));
-		titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path),File.getContent(StringTools.replace(path,".png",".xml")));
+		if (!FileSystem.exists(pathESP)){
+			pathESP = "mods/images/titleEnterEsp.png";
+		}
+		//trace(path, FileSystem.exists(path));
+		if (!FileSystem.exists(pathESP)){
+			pathESP = "assets/images/titleEnterEsp.png";
+		}
+
+		//trace(path, FileSystem.exists(path));
+		if (ClientPrefs.languaGame == 'English')titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path),File.getContent(StringTools.replace(path,".png",".xml")));
+			
+		else if (ClientPrefs.languaGame == 'Portuguese')titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(pathPTBR),File.getContent(StringTools.replace(pathPTBR,".png",".xml")));
+
+		else if (ClientPrefs.languaGame == 'Spanish')titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(pathESP),File.getContent(StringTools.replace(pathESP,".png",".xml")));
+		
 		#else
-		if (FlxG.save.data.languaGame == 'English'){
-			titleText.frames = Paths.getSparrowAtlas('titleEnter');
-			}
-		else if (FlxG.save.data.languaGame == 'Portuguese'){
-			titleText.frames = Paths.getSparrowAtlas('titleEnterPort');
-			}
-		else if (FlxG.save.data.languaGame == 'Spanish'){
-			titleText.frames = Paths.getSparrowAtlas('titleEnterEsp');
-			}
+		if (ClientPrefs.languaGame == 'English')titleText.frames = Paths.getSparrowAtlas('titleEnter');
+
+		else if (ClientPrefs.languaGame == 'Portuguese')titleText.frames = Paths.getSparrowAtlas('titleEnterPort');
+
+		else if (ClientPrefs.languaGame == 'Spanish')titleText.frames = Paths.getSparrowAtlas('titleEnterEsp');
 		#end
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);

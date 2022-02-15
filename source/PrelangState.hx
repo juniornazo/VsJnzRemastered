@@ -1,4 +1,4 @@
-package options;
+package;
 
 #if desktop
 import Discord.DiscordClient;
@@ -23,8 +23,9 @@ import Controls;
 
 using StringTools;
 
-class LanguageState extends MusicBeatState
+class PrelangState extends MusicBeatState
 {
+    public static var leftState:Bool = false;
 
     var curSelected:Int = 0;
 
@@ -109,18 +110,12 @@ class LanguageState extends MusicBeatState
                     changeItem(1);
                 }
     
-                if (controls.BACK)
-                {
-                    selectedSomethin = true;
-                    FlxG.sound.play(Paths.sound('cancelMenu'));
-                    MusicBeatState.switchState(new options.OptionsState());
-                }
-    
                 if (controls.ACCEPT)
                 {
                 
                         selectedSomethin = true;
                         FlxG.sound.play(Paths.sound('confirmMenu'));
+                        leftState = true;
 
                         var daChoice:String = langStuff[curSelected];
 
@@ -152,7 +147,9 @@ class LanguageState extends MusicBeatState
                             {
                                 FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
                                 {
-                                    MusicBeatState.switchState(new options.OptionsState());
+                                    if(FlxG.save.data.flashing == null && !FlashingState.leftState)MusicBeatState.switchState(new FlashingState()); 
+                                    
+                                    else MusicBeatState.switchState(new TitleState());
                                 });
                             }
                         });

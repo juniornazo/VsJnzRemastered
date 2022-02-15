@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "!Oye!",
+			"boxState": "normal",
+			"portrait": "jnz",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "Eres el novio de la hija de la ex estrella de rock, ?verdad?",
+			"boxState": "normal",
+			"portrait": "jnz",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "!beep!",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "!Oh! !que bueno!\\n!Siempre quise conocerte!",
+			"boxState": "normal",
+			"portrait": "jnz",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "?beep bop?",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.05
+		},
+		{
+			"expression": "huh",
+			"text": "?una batalla de rap?",
+			"boxState": "normal",
+			"portrait": "jnz",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "Si, por supuesto, yo tambien estaba pensando en eso.",
+			"boxState": "normal",
+			"portrait": "jnz",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "!!!vamos a empezar!!!",
+			"boxState": "angry",
+			"portrait": "jnz",
+			"speed": 0.03
+		}
+	]
+}

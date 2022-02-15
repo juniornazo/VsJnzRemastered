@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"expression": "huh",
+			"text": "uh...\\n???por que se detuvo la musica???",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "talk",
+			"text": "lo siento... sin ofender ni nada, mas...",
+			"boxState": "normal",
+			"speed": 0.065,
+			"portrait": "gf"
+		},
+		{
+			"expression": "confused",
+			"text": "Tu ritmo era bastante lento...",
+			"boxState": "normal",
+			"speed": 0.065,
+			"portrait": "gf"
+		},
+		{
+			"expression": "angry",
+			"text": "!si, ya no quiero sonar bip bop despues de este!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "angry",
+			"text": "...",
+			"boxState": "normal",
+			"speed": 0.1,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "angry",
+			"text": "entonces...\\nmi ritmo es debil, um...",
+			"boxState": "normal",
+			"speed": 0.075,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "angry",
+			"text": "ok...",
+			"boxState": "normal",
+			"speed": 0.075,
+			"portrait": "jnz"
+		},
+		{
+			"expression": "pissed",
+			"text": "!!!Aumentare mi ritmo!!!",
+			"boxState": "angry",
+			"speed": 0.04,
+			"portrait": "jnz"
+		}
+	]
+}

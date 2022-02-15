@@ -23,13 +23,29 @@ class FlashingState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 
-		warnText = new FlxText(0, 0, FlxG.width,
+		if (ClientPrefs.languaGame == 'English') warnText = new FlxText(0, 0, FlxG.width,
 			"Hey, watch out!\n
-			This Mod contains some flashing lights!\n
+			This Mod contains some flashing lights and Seizure!\n
 			Press ENTER to disable them now or go to Options Menu.\n
 			Press ESCAPE to ignore this message.\n
 			You've been warned!",
 			32);
+		else if (ClientPrefs.languaGame == 'Portuguese') warnText = new FlxText(0, 0, FlxG.width,
+			"Aviso!\n
+			Esse mod contém luzes piscantes e imagens tremendo!\n
+			aperte ENTER para desativalos ou ir para o menu de opções.\n
+			aperte ESCAPE para ignorar essa mensagem.\n
+			Tome cuidado!",
+			32);
+		else if (ClientPrefs.languaGame == 'Spanish') warnText = new FlxText(0, 0, FlxG.width,
+			"¡Cálmate!\n
+			¡Este mod contiene luces intermitentes e imágenes parpadeantes!\n
+			presione ENTER para deshabilitarlos o vaya al menú de opciones.\n
+			presione ESCAPE para ignorar este mensaje.\n
+			¡Ten cuidado!",
+			32);
+
+		
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
@@ -45,6 +61,7 @@ class FlashingState extends MusicBeatState
 				FlxTransitionableState.skipNextTransOut = true;
 				if(!back) {
 					ClientPrefs.flashing = false;
+					ClientPrefs.shaking = false;
 					ClientPrefs.saveSettings();
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					FlxFlicker.flicker(warnText, 1, 0.1, false, true, function(flk:FlxFlicker) {
