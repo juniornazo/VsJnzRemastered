@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lang_English.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="English select0000" x="0" y="0" width="484" height="129"/>
+	<SubTexture name="English select0001" x="0" y="0" width="484" height="129"/>
+	<SubTexture name="English select0002" x="0" y="0" width="484" height="129"/>
+	<SubTexture name="English select0003" x="484" y="0" width="484" height="129"/>
+	<SubTexture name="English select0004" x="484" y="0" width="484" height="129"/>
+	<SubTexture name="English select0005" x="484" y="0" width="484" height="129"/>
+	<SubTexture name="English select0006" x="0" y="129" width="484" height="129"/>
+	<SubTexture name="English select0007" x="0" y="129" width="484" height="129"/>
+	<SubTexture name="English select0008" x="0" y="129" width="484" height="129"/>
+	<SubTexture name="English white0000" x="484" y="129" width="484" height="129"/>
+	<SubTexture name="English white0001" x="0" y="258" width="484" height="129"/>
+	<SubTexture name="English white0002" x="484" y="258" width="484" height="129"/>
+</TextureAtlas>

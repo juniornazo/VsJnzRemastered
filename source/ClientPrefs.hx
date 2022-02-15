@@ -150,7 +150,7 @@ class ClientPrefs {
 		/*if(FlxG.save.data.portDialogue != null) {
 			portDialogue = FlxG.save.data.portDialogue;
 		}*/
-		if(FlxG.save.data.langGame != null) {
+		if(FlxG.save.data.languaGame != null) {
 			languaGame = FlxG.save.data.languaGame;
 		}
 		if(FlxG.save.data.globalAntialiasing != null) {

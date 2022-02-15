@@ -331,11 +331,39 @@ class TitleState extends MusicBeatState
 		if (!FileSystem.exists(path)){
 			path = "assets/images/titleEnter.png";
 		}
+	
+		var path = "mods/" + Paths.currentModDirectory + "/images/titleEnterPort.png";
+		//trace(path, FileSystem.exists(path));
+		if (!FileSystem.exists(path)){
+			path = "mods/images/titleEnterPort.png";
+		}
+		//trace(path, FileSystem.exists(path));
+		if (!FileSystem.exists(path)){
+			path = "assets/images/titleEnterPort.png";
+		}
+
+		var path = "mods/" + Paths.currentModDirectory + "/images/titleEnterEsp.png";
+		//trace(path, FileSystem.exists(path));
+		if (!FileSystem.exists(path)){
+			path = "mods/images/titleEnterEsp.png";
+		}
+		//trace(path, FileSystem.exists(path));
+		if (!FileSystem.exists(path)){
+				path = "assets/images/titleEnterEsp.png";
+		}
+
 		//trace(path, FileSystem.exists(path));
 		titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path),File.getContent(StringTools.replace(path,".png",".xml")));
 		#else
-		
-		titleText.frames = Paths.getSparrowAtlas('titleEnter');
+		if (FlxG.save.data.languaGame == 'English'){
+			titleText.frames = Paths.getSparrowAtlas('titleEnter');
+			}
+		else if (FlxG.save.data.languaGame == 'Portuguese'){
+			titleText.frames = Paths.getSparrowAtlas('titleEnterPort');
+			}
+		else if (FlxG.save.data.languaGame == 'Spanish'){
+			titleText.frames = Paths.getSparrowAtlas('titleEnterEsp');
+			}
 		#end
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);

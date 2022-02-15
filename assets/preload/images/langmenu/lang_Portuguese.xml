@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lang_Portuguese.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Portuguese select0000" x="0" y="0" width="477" height="103"/>
+	<SubTexture name="Portuguese select0001" x="0" y="0" width="477" height="103"/>
+	<SubTexture name="Portuguese select0002" x="0" y="0" width="477" height="103"/>
+	<SubTexture name="Portuguese select0003" x="477" y="0" width="477" height="103"/>
+	<SubTexture name="Portuguese select0004" x="477" y="0" width="477" height="103"/>
+	<SubTexture name="Portuguese select0005" x="477" y="0" width="477" height="103"/>
+	<SubTexture name="Portuguese select0006" x="0" y="103" width="477" height="103"/>
+	<SubTexture name="Portuguese select0007" x="0" y="103" width="477" height="103"/>
+	<SubTexture name="Portuguese select0008" x="0" y="103" width="477" height="103"/>
+	<SubTexture name="Portuguese white0000" x="477" y="103" width="477" height="103"/>
+	<SubTexture name="Portuguese white0001" x="0" y="206" width="477" height="103"/>
+	<SubTexture name="Portuguese white0002" x="477" y="206" width="477" height="103"/>
+</TextureAtlas>
