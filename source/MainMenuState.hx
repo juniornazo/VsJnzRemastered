@@ -159,7 +159,9 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
+			if (ClientPrefs.languaGame == 'English') menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
+			else if (ClientPrefs.languaGame == 'Spanish') menuItem.frames = Paths.getSparrowAtlas('mainmenuESP/menu_' + optionShit[i]);
+			else if (ClientPrefs.languaGame == 'Portuguese') menuItem.frames = Paths.getSparrowAtlas('mainmenuPTBR/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
