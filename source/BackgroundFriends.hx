@@ -11,6 +11,7 @@ class BackgroundFriends extends FlxSprite
 		super(x, y);
 
 		frames = Paths.getSparrowAtlas("friends");
+		animation.addByPrefix('hey', 'hey', 24, false);
 		antialiasing = ClientPrefs.globalAntialiasing;
 
 		getScared();
@@ -21,8 +22,8 @@ class BackgroundFriends extends FlxSprite
 	public function getScared():Void
 	{
 		isScared = !isScared;
-		if (isScared) animation.addByIndices('idle', 'friends scared', CoolUtil.numberArray(14), "", 24, false);
-		else animation.addByIndices('idle', 'friends', CoolUtil.numberArray(14), "", 24, false);
+		if (isScared) animation.addByIndices('idle', 'scared', CoolUtil.numberArray(14), "", 24, false);
+		else animation.addByIndices('idle', 'idle', CoolUtil.numberArray(14), "", 24, false);
 		
 		dance();
 	}

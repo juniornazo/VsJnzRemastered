@@ -185,7 +185,8 @@ class PlayState extends MusicBeatState
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 	var dialogueJson:DialogueFile = null;
 
-	var friends:BackgroundFriends;
+	//var friends:BackgroundFriends;
+	var friends:BGSprite;
 
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
@@ -443,17 +444,17 @@ class PlayState extends MusicBeatState
             add(streetGround);
 
 			if(!ClientPrefs.lowQuality) {
-            friends = new BackgroundFriends(165, 235);
+            //friends = new BackgroundFriends(165, 235);
+			friends = new BGSprite('friends', 165, 235, 0.94, 0.94, ['idle']);
+			friends.animation.addByPrefix('hey', 'hey', 24, false);
             friends.updateHitbox();
             friends.setGraphicSize(Std.int(friends.width * 1.25));
-            friends.scrollFactor.set(0.94, 0.94);
+            //friends.scrollFactor.set(0.94, 0.94);
             add(friends);
 			}
 
 			case 'madStreet': //Week Jnz mad-buns
 
-			GameOverSubstate.loopSoundName = 'gameOver';
-			GameOverSubstate.endSoundName = 'gameOverEnd';
 			GameOverSubstate.characterName = 'bf-street-dead';
 			GameOverSubstate.deathSoundName = 'fnf_loss_sfx-street';
 
@@ -473,11 +474,12 @@ class PlayState extends MusicBeatState
             add(streetGround);
 
 			if(!ClientPrefs.lowQuality) {
-            friends = new BackgroundFriends(1065, 290);
+            //friends = new BackgroundFriends(1065, 290);
+			friends = new BGSprite('friends', 1065, 235, 0.94, 0.94, ['scared']);
             friends.updateHitbox();
             friends.setGraphicSize(Std.int(friends.width * 1.25));
-			friends.getScared();
-            friends.scrollFactor.set(0.94, 0.94);
+			//friends.getScared();
+            //friends.scrollFactor.set(0.94, 0.94);
             add(friends);
 			}
 
@@ -2751,6 +2753,11 @@ class PlayState extends MusicBeatState
 
 					if(curStage == 'mall') {
 						bottomBoppers.animation.play('hey', true);
+						heyTimer = time;
+					}
+
+					if(curStage == 'street'){
+						friends.animation.play('hey', true);
 						heyTimer = time;
 					}
 				}
