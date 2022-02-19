@@ -3963,6 +3963,7 @@ class PlayState extends MusicBeatState
 				if(note.dodgeNotes) {
 					if(dad.animation.getByName('attack') != null) {
 						dad.playAnim('attack', true);
+						FlxG.sound.play(Paths.sound('slash'));
 						dad.specialAnim = true;
 					}
 					if(boyfriend.animation.getByName('dodge') != null) {
