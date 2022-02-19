@@ -3752,9 +3752,13 @@ class PlayState extends MusicBeatState
 
 		if (daNote.noteType == 'Dodge note'){
 			if(boyfriend.animation.getByName('dodge') != null) {
-							boyfriend.playAnim('dodge', true);
-							boyfriend.specialAnim = true;
-						}	
+			boyfriend.playAnim('dodge', true);
+			boyfriend.specialAnim = true;
+			}
+			if(dad.animation.getByName('attack') != null) {
+			dad.playAnim('attack', true);
+			dad.specialAnim = true;
+			}
 		}
 
 		health -= daNote.missHealth * healthLoss;
@@ -3957,6 +3961,10 @@ class PlayState extends MusicBeatState
 					}
 				//}
 				if(note.dodgeNotes) {
+					if(dad.animation.getByName('attack') != null) {
+						dad.playAnim('attack', true);
+						dad.specialAnim = true;
+					}
 					if(boyfriend.animation.getByName('dodge') != null) {
 								boyfriend.playAnim('dodge', true);
 								boyfriend.specialAnim = true;
