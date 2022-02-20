@@ -256,7 +256,7 @@ class MainMenuState extends MusicBeatState
 					
 				if (FlxG.mouse.justPressed)
 				{
-
+				
 				if(FlxG.mouse.overlaps(bumpGame))
 					{
 						CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
@@ -270,6 +270,7 @@ class MainMenuState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('confirmMenu'));
 						if(ClientPrefs.flashing) FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 						MusicBeatState.switchState(new AchievementsMenuState());
+						FlxG.mouse.visible = false;
 								
 					}
 				else if (FlxG.mouse.overlaps(rollWrench))
@@ -279,6 +280,7 @@ class MainMenuState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('confirmMenu'));
 						if(ClientPrefs.flashing) FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 						MusicBeatState.switchState(new options.OptionsState());
+						FlxG.mouse.visible = false;
 									
 					}
 				}
@@ -304,6 +306,7 @@ class MainMenuState extends MusicBeatState
 			{
 				selectedSomethin = true;
 				selectedSomeMouse = true;
+				FlxG.mouse.visible = false;
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				MusicBeatState.switchState(new TitleState());
 			}
@@ -314,6 +317,7 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = true;
 					selectedSomeMouse = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
+					FlxG.mouse.visible = false;
 
 					if(ClientPrefs.flashing) FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 
@@ -359,6 +363,7 @@ class MainMenuState extends MusicBeatState
 			{
 				selectedSomethin = true;
 				selectedSomeMouse = true;
+				FlxG.mouse.visible = false;
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
 			#end
