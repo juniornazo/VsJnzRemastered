@@ -11,6 +11,7 @@ class StrumNote extends FlxSprite
 	private var colorSwap:ColorSwap;
 	public var resetAnim:Float = 0;
 	private var noteData:Int = 0;
+	public var notetype:String = 'normal';
 	public var direction:Float = 30;//plan on doing scroll directions soon -bb
 
 	private var player:Int;
@@ -24,17 +25,26 @@ class StrumNote extends FlxSprite
 		return value;
 	}
 
-	public function new(x:Float, y:Float, leData:Int, player:Int) {
+	public function new(x:Float, y:Float, leData:Int, player:Int,notetype:String) {
 		colorSwap = new ColorSwap();
 		shader = colorSwap.shader;
 		noteData = leData;
 		this.player = player;
+		this.notetype = notetype;
 		this.noteData = leData;
 		super(x, y);
 
 		var skin:String = 'NOTE_assets';
 		if(PlayState.SONG.arrowSkin != null && PlayState.SONG.arrowSkin.length > 1) skin = PlayState.SONG.arrowSkin;
 		texture = skin; //Load texture and anims
+
+		switch (notetype)
+		{
+			case 'normal':
+				skin = 'NOTE_assets';
+			case 'mad':
+				skin = 'MadNotes';
+		}
 
 		scrollFactor.set();
 	}
@@ -80,7 +90,8 @@ class StrumNote extends FlxSprite
 		}
 		else
 		{
-			frames = Paths.getSparrowAtlas(texture);
+			if (notetype == 'normal') frames = Paths.getSparrowAtlas(texture);
+			else if (notetype == 'mad') frames = Paths.getSparrowAtlas('MadNotes');
 			animation.addByPrefix('green', 'arrowUP');
 			animation.addByPrefix('blue', 'arrowDOWN');
 			animation.addByPrefix('purple', 'arrowLEFT');
