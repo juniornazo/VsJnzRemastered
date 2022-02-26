@@ -1,23 +1,24 @@
 {
-	"storyName": "Junior Nazo",
+	"storyName": "Junior Nazo Minus mode",
 	"hideFreeplay": false,
 	"weekBackground": "street",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"hideStoryMode": false,
 	"weekCharacters": [
 		"jnz",
-		"bf",
-		"gf"
+		"bfminus",
+		"gfminus"
 	],
 	"songs": [
 		[
 			"shine stars",
-			"jnz",
+			"jnz-minus",
 			[
 				86,
 				173,
@@ -26,7 +27,7 @@
 		],
 		[
 			"fasting time",
-			"jnz",
+			"jnz-minus",
 			[
 				86,
 				173,
@@ -35,7 +36,7 @@
 		],
 		[
 			"mad buns",
-			"mad-bunny",
+			"mad-minus",
 			[
 				160,
 				40,
@@ -43,6 +44,5 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
-	"weekName": "Week Jnz"
+	"weekName": "Week Jnz Minus"
 }

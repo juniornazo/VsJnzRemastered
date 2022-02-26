@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				-165
+				-20,
+				-145
 			],
 			"loop": false,
 			"anim": "cheer",
@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				0,
-				-169
+				-20,
+				-150
 			],
 			"loop": false,
 			"anim": "danceLeft",
@@ -41,8 +41,8 @@
 		},
 		{
 			"offsets": [
-				0,
-				-169
+				-20,
+				-150
 			],
 			"loop": false,
 			"anim": "danceRight",
@@ -68,8 +68,8 @@
 		},
 		{
 			"offsets": [
-				-1,
-				-187
+				-20,
+				-167
 			],
 			"loop": true,
 			"fps": 24,
