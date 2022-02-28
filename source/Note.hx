@@ -107,7 +107,9 @@ class Note extends FlxSprite
 						colorSwap.hue = 0;
 						colorSwap.saturation = 0;
 						colorSwap.brightness = 0;
-						missHealth = 5;				
+						if (PlayState.storyDifficulty == 2) missHealth = 1;
+						else if (PlayState.storyDifficulty == 1) missHealth = 0.3;
+						else if (PlayState.storyDifficulty == 0) missHealth = 0.15;				
 						dodgeNotes = true;
 				case 'No Animation':
 					noAnimation = true;

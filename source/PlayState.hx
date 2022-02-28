@@ -3768,20 +3768,22 @@ class PlayState extends MusicBeatState
 				note.kill();
 				notes.remove(note, true);
 				note.destroy();
+
+				if (daNote.noteType == 'Dodge note'){
+					if(boyfriend.animation.getByName('hurt') != null) {
+					boyfriend.playAnim('hurt', true);
+					boyfriend.specialAnim = true;
+					}
+					if(dad.animation.getByName('attack') != null) {
+					dad.playAnim('attack', true);
+					FlxG.sound.play(Paths.sound('slash'));
+					dad.specialAnim = true;
+					}
+				}
+
 			}
 		});
 		combo = 0;
-
-		if (daNote.noteType == 'Dodge note'){
-			if(boyfriend.animation.getByName('dodge') != null) {
-			boyfriend.playAnim('dodge', true);
-			boyfriend.specialAnim = true;
-			}
-			if(dad.animation.getByName('attack') != null) {
-			dad.playAnim('attack', true);
-			dad.specialAnim = true;
-			}
-		}
 
 		health -= daNote.missHealth * healthLoss;
 		if(instakillOnMiss)

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Menu_jnz.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="jnz char0000" x="10" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0001" x="361" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0002" x="361" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0003" x="712" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0004" x="712" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0005" x="1063" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0006" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0007" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0008" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0009" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0010" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0011" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0012" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0013" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0014" x="10" y="567" width="341" height="547"/>
+	<SubTexture name="jnz char0015" x="361" y="567" width="341" height="547"/>
+	<SubTexture name="jnz char0016" x="361" y="567" width="341" height="547"/>
+	<SubTexture name="jnz char0017" x="712" y="567" width="341" height="547"/>
+	<SubTexture name="jnz char0018" x="712" y="567" width="341" height="547"/>
+	<SubTexture name="jnz char0019" x="1063" y="567" width="341" height="547"/>
+	<SubTexture name="jnz char0020" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0021" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0022" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0023" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0024" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0025" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0026" x="1414" y="10" width="341" height="547"/>
+	<SubTexture name="jnz char0027" x="1414" y="10" width="341" height="547"/>
+</TextureAtlas>
