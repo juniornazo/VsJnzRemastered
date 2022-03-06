@@ -187,6 +187,7 @@ class PlayState extends MusicBeatState
 
 	//var friends:BackgroundFriends;
 	var friends:BGSprite;
+	var bicycleDude:BGSprite;
 
 	var halloweenBG:BGSprite;
 	var halloweenWhite:BGSprite;
@@ -452,6 +453,9 @@ class PlayState extends MusicBeatState
             //friends.scrollFactor.set(0.94, 0.94);
             add(friends);
 			}
+			
+			bicycleDude = new BGSprite('bicycle dude', -300, 450);
+			bicycleDude.active = true;
 
 			case 'madStreet': //Week Jnz mad-buns
 
@@ -840,6 +844,8 @@ class PlayState extends MusicBeatState
 					gfVersion = 'gf-christmas';
 				case 'school' | 'schoolEvil':
 					gfVersion = 'gf-pixel';
+				case 'street' | 'madstreet':
+					gfVersion = 'gf-street';
 				default:
 					gfVersion = 'gf';
 			}
@@ -880,6 +886,10 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069); //nice
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
+			
+			case 'street':
+				resetbicycleDude();
+				insert(members.indexOf(gfGroup) + 3, bicycleDude);
 		}
 
 		if(ClientPrefs.languaGame == 'Portuguese'){
@@ -2289,6 +2299,14 @@ class PlayState extends MusicBeatState
 					if(heyTimer <= 0) {
 						bottomBoppers.dance(true);
 						heyTimer = 0;
+					}
+				}
+			case 'street':
+				if(heyTimer > 0) {
+					heyTimer -= elapsed;
+					if(heyTimer <= 0) {
+							friends.dance(true);
+							heyTimer = 0;
 					}
 				}
 		}
@@ -4095,6 +4113,31 @@ class PlayState extends MusicBeatState
 		});
 	}
 
+	var bicyclePass:Bool = true;
+
+	function resetbicycleDude():Void
+	{
+		bicycleDude.x = -5500;
+		bicycleDude.y = 450;
+		bicycleDude.velocity.x = 0;
+		bicyclePass = true;
+	}
+
+	var bicyleTimer:FlxTimer;
+	function bicycleDudeDrive()
+	{
+		//trace('Car drive');
+		FlxG.sound.play(Paths.soundRandom('ringbell', 0, 2), 0.5);
+
+		bicycleDude.velocity.x = (FlxG.random.int(30, 50) / FlxG.elapsed) * 3;
+		bicyclePass = false;
+		bicyleTimer = new FlxTimer().start(2, function(tmr:FlxTimer)
+		{
+			resetbicycleDude();
+			bicyleTimer = null;
+		});
+	}
+
 	var trainMoving:Bool = false;
 	var trainFrameTiming:Float = 0;
 
@@ -4349,10 +4392,14 @@ class PlayState extends MusicBeatState
 					bgGirls.dance();
 				}
 
-			case 'street' | 'madStreet':
+			case 'street':
 				if(!ClientPrefs.lowQuality) {
-					friends.dance();
+					if(heyTimer <= 0) friends.dance(true);
 				}
+				if (FlxG.random.bool(5) && bicyclePass) bicycleDudeDrive();
+
+			case 'madStreet':
+				if(!ClientPrefs.lowQuality) friends.dance();					
 
 			case 'mall':
 				if(!ClientPrefs.lowQuality) {

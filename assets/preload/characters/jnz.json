@@ -45,17 +45,6 @@
 			"indices": []
 		},
 		{
-			"loop": false,
-			"offsets": [
-				-15,
-				-3
-			],
-			"anim": "count",
-			"fps": 24,
-			"name": "count",
-			"indices": []
-		},
-		{
 			"offsets": [
 				-25,
 				0
@@ -78,10 +67,14 @@
 			"name": "stoped"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "idle",
 			"indices": [
 				11,
 				12,
@@ -94,18 +87,21 @@
 				19,
 				20,
 				21,
+				22,
+				22,
+				22,
 				22
-			],
-			"fps": 24,
-			"anim": "danceRight",
-			"loop": false,
-			"name": "idle"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "idle",
 			"indices": [
 				23,
 				0,
@@ -118,12 +114,22 @@
 				7,
 				8,
 				9,
+				10,
+				10,
+				10,
 				10
+			]
+		},
+		{
+			"offsets": [
+				-15,
+				-3
 			],
-			"fps": 24,
-			"anim": "danceLeft",
+			"indices": [],
+			"fps": 28,
+			"anim": "count",
 			"loop": false,
-			"name": "idle"
+			"name": "count"
 		}
 	],
 	"no_antialiasing": false,
