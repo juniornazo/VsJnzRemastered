@@ -42,7 +42,7 @@ class ClientPrefs {
 		'opponentplay' => false
 	];
 
-	public static var comboOffset:Array<Int> = [0, 0, 0, 0];
+	public static var comboOffset:Array<Int> = [0, 0, 0, 0, 0, 0];
 	public static var keSustains:Bool = false; //i was bored, okay?
 	
 	public static var ratingOffset:Int = 0;

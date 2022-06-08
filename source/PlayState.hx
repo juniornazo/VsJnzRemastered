@@ -1090,6 +1090,7 @@ class PlayState extends MusicBeatState
 		healthBar.alpha = ClientPrefs.healthBarAlpha;
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
+		add(healthBarBG);
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
@@ -1104,10 +1105,10 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt = new FlxText(5, 630, FlxG.width, "", 34);
+		scoreTxt.setFormat(Paths.font("funkin.ttf"), 34, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
-		scoreTxt.borderSize = 1.25;
+		scoreTxt.borderSize = 2.50;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
@@ -1115,7 +1116,7 @@ class PlayState extends MusicBeatState
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
-		botplayTxt.visible = cpuControlled;
+		botplayTxt.visible = false;
 		add(botplayTxt);
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
@@ -1423,6 +1424,7 @@ class PlayState extends MusicBeatState
 			(new FlxVideo(fileName)).finishCallback = function() {
 				remove(bg);
 				if(endingSong) {
+					//if (isStoryMode && daSong == 'mad-buns') startVideo('MadBunsFinal');
 					endSong();
 				} else if(daSong == 'shine-stars') {
 					startDialogue(dialogueJson);
@@ -2327,9 +2329,9 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
+			scoreTxt.text = ' Score: ' + songScore + '\n Misses: ' + songMisses + '\n Rating: ' + ratingName;
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+			scoreTxt.text = ' Score: ' + songScore + '\n Misses: ' + songMisses + '\n Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
 		}
 
 		if(botplayTxt.visible) {
@@ -3496,12 +3498,13 @@ class PlayState extends MusicBeatState
 		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 		comboSpr.cameras = [camHUD];
 		comboSpr.screenCenter();
-		comboSpr.x = coolText.x;
+		comboSpr.x = coolText.x - 90;
+		comboSpr.y -= 80;
 		comboSpr.acceleration.y = 600;
 		comboSpr.velocity.y -= 150;
 		comboSpr.visible = !ClientPrefs.hideHud;
-		comboSpr.x += ClientPrefs.comboOffset[0];
-		comboSpr.y -= ClientPrefs.comboOffset[1];
+		comboSpr.x += ClientPrefs.comboOffset[4];
+		comboSpr.y -= ClientPrefs.comboOffset[5];
 
 
 		comboSpr.velocity.x += FlxG.random.int(1, 10);
@@ -3511,13 +3514,13 @@ class PlayState extends MusicBeatState
 		{
 			rating.setGraphicSize(Std.int(rating.width * 0.7));
 			rating.antialiasing = ClientPrefs.globalAntialiasing;
-			comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7));
+			comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.5));
 			comboSpr.antialiasing = ClientPrefs.globalAntialiasing;
 		}
 		else
 		{
 			rating.setGraphicSize(Std.int(rating.width * daPixelZoom * 0.85));
-			comboSpr.setGraphicSize(Std.int(comboSpr.width * daPixelZoom * 0.85));
+			comboSpr.setGraphicSize(Std.int(comboSpr.width * daPixelZoom * 0.65));
 		}
 
 		comboSpr.updateHitbox();
@@ -3571,6 +3574,17 @@ class PlayState extends MusicBeatState
 				startDelay: Conductor.crochet * 0.002
 			});
 
+			if (combo >= 10)
+				insert(members.indexOf(strumLineNotes), comboSpr);
+
+			FlxTween.tween(comboSpr, {alpha: 0}, 0.2, {
+				onComplete: function(tween:FlxTween)
+				{
+					comboSpr.destroy();
+				},
+				startDelay: Conductor.crochet * 0.002
+			});
+
 			daLoop++;
 		}
 		/* 
@@ -3582,17 +3596,12 @@ class PlayState extends MusicBeatState
 		// add(coolText);
 
 		FlxTween.tween(rating, {alpha: 0}, 0.2, {
-			startDelay: Conductor.crochet * 0.001
-		});
-
-		FlxTween.tween(comboSpr, {alpha: 0}, 0.2, {
 			onComplete: function(tween:FlxTween)
-			{
-				coolText.destroy();
-				comboSpr.destroy();
-
-				rating.destroy();
-			},
+				{
+					coolText.destroy();
+	
+					rating.destroy();
+				},
 			startDelay: Conductor.crochet * 0.001
 		});
 	}
@@ -3787,19 +3796,20 @@ class PlayState extends MusicBeatState
 				notes.remove(note, true);
 				note.destroy();
 
-				if (daNote.noteType == 'Dodge note'){
-					if(boyfriend.animation.getByName('hurt') != null) {
-					boyfriend.playAnim('hurt', true);
-					boyfriend.specialAnim = true;
-					}
-					if(dad.animation.getByName('attack') != null) {
-					dad.playAnim('attack', true);
-					FlxG.sound.play(Paths.sound('slash'));
-					dad.specialAnim = true;
-					}
-				}
-
 			}
+
+			if (daNote.noteType == 'Dodge note' && daNote != note && daNote.mustPress && daNote.noteData == note.noteData && daNote.isSustainNote == note.isSustainNote && Math.abs(daNote.strumTime - note.strumTime) < 1){
+				if(boyfriend.animation.getByName('hurt') != null) {
+				boyfriend.playAnim('hurt', true);
+				boyfriend.specialAnim = true;
+				}
+				if(dad.animation.getByName('attack') != null) {
+				dad.playAnim('attack', true);
+				FlxG.sound.play(Paths.sound('slash'));
+				dad.specialAnim = true;
+				}
+			}
+
 		});
 		combo = 0;
 
@@ -4505,8 +4515,13 @@ class PlayState extends MusicBeatState
 		var ret:Dynamic = callOnLuas('onRecalculateRating', []);
 		if(ret != FunkinLua.Function_Stop)
 		{
+			
 			if(totalPlayed < 1) //Prevent divide by 0
-				ratingName = '?';
+				{
+				if(ClientPrefs.getGameplaySetting('botplay', false)) ratingName = 'Turn off the BotPlay you cheater';
+				else ratingName = '?';
+			}
+			
 			else
 			{
 				// Rating Percent

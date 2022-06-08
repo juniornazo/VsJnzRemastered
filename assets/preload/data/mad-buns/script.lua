@@ -77,3 +77,12 @@ function opponentNoteHit()
         setProperty('health', health- 0.017);
     end
 end
+
+function onEndSong()
+	if not allowEnd and isStoryMode then
+		startVideo('MadBunsFinal');
+		allowEnd = true;
+		return Function_Stop;
+	end
+	return Function_Continue;
+end

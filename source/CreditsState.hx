@@ -100,8 +100,9 @@ class CreditsState extends MusicBeatState
 			["Vs Jnz Team"],
 			['Skelebunny',			'skelebunny',		"Programmer/animator and artist of Vs Jnz Week",		'https://twitter.com/junior_nazo',		'F73838'],
 			['Alex Taiyo', 			'alex', 			"Composer of Vs Jnz Week", 								'https://twitter.com/AlexTaiyo', 		'FF55C0'],
-			['Fran', 				'fran', 			"Cutscene-Mad-Buns animator", 							'https://twitter.com/GameKidsFran', 	'79D0FF'],
-			['Blaze',				'blaze',			"Charter of Vs Jnz Week",								'https://twitter.com/BlazeWasHereLol',	'543BB4']
+			['Fran', 				'fran', 			"Cutscene's stater Mad-Buns animator", 					'https://twitter.com/GameKidsFran', 	'79D0FF'],
+			['Blaze',				'blaze',			"Charter of Vs Jnz Week",								'https://twitter.com/BlazeWasHereLol',	'543BB4'],
+			['Diduilitm',			'diduilitm',		"Charter of Mad-Buns",									'https://www.youtube.com/channel/UCfVSY41qBfns1qWmeLhi0OQ', '0055FF']
 		];
 		
 		for(i in pisspoop){
