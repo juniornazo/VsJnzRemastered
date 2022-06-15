@@ -2330,7 +2330,7 @@ class PlayState extends MusicBeatState
 
 		if(ratingName == '?') {
 			scoreTxt.text = ' Score: ' + songScore + '\n Misses: ' + songMisses + '\n Rating: ' + ratingName + '\n';
-		} else if (ratingName = 'Turn off the BotPlay you cheater') {
+		} else if (ratingName == 'Turn off the BotPlay you cheater') {
 			scoreTxt.text = ' Score: ' + songScore + '\n Misses: ' + songMisses + '\n Rating: ' + ratingName + '\n';
 		} else {
 			scoreTxt.text = ' Score: ' + songScore + '\n Misses: ' + songMisses + '\n Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC + '\n';//peeps wanted no integer rating
